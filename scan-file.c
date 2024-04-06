@@ -44,6 +44,9 @@ int scan_file( char * filename , uint8_t * signature , size_t length )
 		return( SCAN_FILE_ERROR_MMAP_FAILED );
 	}
 
+  // Something closely resembling Boyer-Moore
+  // https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm
+  
 	size_t offset = 0;
 
 	while( offset <= statbuf . st_size - length )
