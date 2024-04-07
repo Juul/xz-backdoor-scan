@@ -2,10 +2,12 @@ EXE	= xz-backdoor-scan
 
 SRCS	=
 SRCS	+=	main.c
-SRCS	+=	signature.c
-SRCS	+=	signature.h
+SRCS	+=	xz-backdoor-signature.c
+SRCS	+=	xz-backdoor-signature.h
 SRCS	+=	scan-file.c
 SRCS	+=	scan-file.h
+SRCS	+=	usage.c
+SRCS	+=	usage.h
 
 OBJS	=	$(patsubst %.c,%.o,$(filter %.c,${SRCS}))
 

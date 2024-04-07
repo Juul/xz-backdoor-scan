@@ -8,11 +8,30 @@ This program was not written by [juul](http://github.com/juul). It was written b
 
 # Usage
 
+```
+Usage:
+	./xz-backdoor-scan [options] <filenames> [...]
+
+Where [options] are:
+
+	-h / --help
+		This text
+
+	-f / --file <filename>
+		Search for content of "filename" instead of the xz-backdoor signature
+	-n / --needle <needle>
+		Search for "needle" instead of the xz-backdoor signature
+		This is mostly useful for searching for text strings.
+		For binary data, see -f / --file
+```
+
 To scan files in a directory non-recursively:
 
 ```
 ~# ./xz-backdoor-scan *
 ```
+
+Note that the above assumes that there are _only_ files in the currenty directory.
 
 If files containing the signature are found, the output will look something like this:
 
